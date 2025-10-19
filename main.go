@@ -2,9 +2,8 @@ package main
 
 import (
 	"fmt"
-	"time"
 
-	"math/rand"
+	"github.com/fazrinanabillah/go-randgen/generator"
 )
 
 func main() {
@@ -13,18 +12,9 @@ func main() {
 	var n int
 	fmt.Scanln(&n)
 
-	randomString := GenerateRandomString(n)
+	randomString := generator.GenerateRandomString(n)
 	fmt.Println("Random String:", randomString)
-}
 
-func GenerateRandomString(n int) string {
-	var randomizer = rand.New(rand.NewSource(time.Now().UnixNano()))
-	var rn = []rune("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")
-
-	str := make([]rune, n)
-	for i := range str {
-		str[i] = rn[randomizer.Intn(len(rn))]
-	}
-
-	return string(str)
+	randomAlphanumeric := generator.GenerateRandomAlphanumeric(n)
+	fmt.Println("Random Alphanumeric String:", randomAlphanumeric)
 }
