@@ -17,4 +17,7 @@ func main() {
 
 	randomAlphanumeric := generator.GenerateRandomAlphanumeric(n)
 	fmt.Println("Random Alphanumeric String:", randomAlphanumeric)
+
+	randomNumber := generator.GenerateRandomNumber(n)
+	fmt.Println("Random Number String:", randomNumber)
 }
