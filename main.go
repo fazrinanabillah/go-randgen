@@ -20,4 +20,7 @@ func main() {
 
 	randomNumber := generator.GenerateRandomNumber(n)
 	fmt.Println("Random Number String:", randomNumber)
+
+	randomCharacter := generator.GenerateRandomCharacter(n)
+	fmt.Println("Random Character String:", randomCharacter)
 }
